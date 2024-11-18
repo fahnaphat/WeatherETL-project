@@ -1,0 +1,19 @@
+[2024-11-18T12:48:52.768+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-18T12:48:53.772+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_etl_pipeline.transform_weather_data manual__2024-11-18T12:48:06.879334+00:00 [queued]>
+[2024-11-18T12:48:54.365+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_etl_pipeline.transform_weather_data manual__2024-11-18T12:48:06.879334+00:00 [queued]>
+[2024-11-18T12:48:54.369+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 6
+[2024-11-18T12:48:55.536+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonDecoratedOperator): transform_weather_data> on 2024-11-18 12:48:06.879334+00:00
+[2024-11-18T12:48:55.938+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'weather_etl_pipeline', 'transform_weather_data', 'manual__2024-11-18T12:48:06.879334+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/weather_etl.py', '--cfg-path', '/tmp/tmpfouv506m']
+[2024-11-18T12:48:55.950+0000] {standard_task_runner.py:105} INFO - Job 12: Subtask transform_weather_data
+[2024-11-18T12:48:56.004+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=578) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-11-18T12:48:56.017+0000] {standard_task_runner.py:72} INFO - Started process 590 to run task
+[2024-11-18T12:48:57.256+0000] {task_command.py:467} INFO - Running <TaskInstance: weather_etl_pipeline.transform_weather_data manual__2024-11-18T12:48:06.879334+00:00 [running]> on host a1d4e919f1b0
+[2024-11-18T12:49:00.394+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='naphat' AIRFLOW_CTX_DAG_ID='weather_etl_pipeline' AIRFLOW_CTX_TASK_ID='transform_weather_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-18T12:48:06.879334+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-18T12:48:06.879334+00:00'
+[2024-11-18T12:49:00.537+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-18T12:49:00.803+0000] {python.py:240} INFO - Done. Returned value was: {'Time of Record': '2024-11-18 12:47:07', 'Country': 'TH', 'City': 'Bangkok', 'Latitude': 13.75, 'Longitude': 100.5167, 'Current Weather': 'Clouds', 'Temperature (F)': 85.892, 'Feels Like (F)': 91.99400000000009, 'Minimun Temp (F)': 82.90400000000005, 'Maximum Temp (F)': 85.892, 'Pressure': 1011, 'Humidty': 63, 'Wind Speed': 1.61, 'Sunrise (Local Time)': '2024-11-17 23:19:15', 'Sunset (Local Time)': '2024-11-18 10:47:17'}
+[2024-11-18T12:49:02.028+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-18T12:49:02.032+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=weather_etl_pipeline, task_id=transform_weather_data, run_id=manual__2024-11-18T12:48:06.879334+00:00, execution_date=20241118T124806, start_date=20241118T124853, end_date=20241118T124902
+[2024-11-18T12:49:02.549+0000] {job.py:229} INFO - Heartbeat recovered after 12.47 seconds
+[2024-11-18T12:49:03.256+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-18T12:49:04.063+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-11-18T12:49:04.083+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
